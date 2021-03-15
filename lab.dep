@@ -1,0 +1,20 @@
+# lab.dep - defines machine dependencies for this lab
+
+# -------------------------------------------- #
+# --------- hosts LOCAL to Warwick ----------- #
+# -------------------------------------------- #
+
+# --- for IPSec config VPN 1 --- #
+local1:  vpn1.u2086937.cyber2020.test
+local2:  vpn1.u2086937.cyber2020.test
+local3:  vpn1.u2086937.cyber2020.test
+
+# --- for WireGuard config VPN 2 --- #
+local1:  vpn2.u2086937.cyber2020.test
+local2:  vpn2.u2086937.cyber2020.test
+local3:  vpn2.u2086937.cyber2020.test
+
+# -------------------------------------------- #
+
+
+

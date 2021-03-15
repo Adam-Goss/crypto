@@ -1,0 +1,27 @@
+# webserver1.u2086937.cyber2020.test.startup - startup file for webserver1.u2086937.cyber2020.test machine
+# webserver1 = public facing apache web server that uses HTTPS for security
+
+# ------------------------------------------ #
+# ------------ network setup --------------- #
+# IP address iface[0] - connected to ispA
+ifconfig eth0 213.1.133.100/27
+# MAC address iface[0]
+ifconfig eth0 hw ether ee:2e:3e:1e:2e:3e
+
+# routes to ispA
+route add default gw 213.1.133.97
+# ------------------------------------------ #
+
+
+# ------------------------------------------ #
+# ------------ firewall setup -------------- #
+# can add firewall rules here with 'iptables'
+# when deployed in the real world
+
+# NAT rules
+# iptables -t nat -A POSTROUTING -o eth2 -j MASQUERADE 
+# ------------------------------------------ #
+
+
+# ipv4 only
+sysctl -p

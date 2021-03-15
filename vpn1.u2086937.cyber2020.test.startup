@@ -1,0 +1,38 @@
+# vpn1.u2086937.cyber2020.test.startup - startup file for vpn1.u2086937.cyber2020.test machine
+# vpn1 = VPN gateway that uses IPSec for security
+
+# ------------------------------------------ #
+# ------------ network setup --------------- #
+# ------------------------------------------ #
+# IP address iface[0] - connected to Warwick (gateway on subnet)
+ifconfig eth0 10.11.0.1/16
+# MAC address iface[0]
+ifconfig eth0 hw ether 50:00:aa:11:11:11
+
+
+# IP address iface[1] - connected to ispA
+ifconfig eth1 213.1.133.98/27
+# MAC address iface[1]
+ifconfig eth1 hw ether 50:00:aa:22:22:22
+
+# routes to ispA
+route add default gw 213.1.133.97
+# ------------------------------------------ #
+
+
+# ------------------------------------------ #
+# ------------ firewall setup -------------- #
+# ------------------------------------------ #
+# can add firewall rules here with 'iptables'
+# when deployed in the real world
+
+# NAT rules
+#iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE 
+# ------------------------------------------ #
+
+
+# ipv4 only
+sysctl -p
+
+# launches client IPSec VPN on boot
+service ipsec start

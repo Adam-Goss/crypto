@@ -1,0 +1,21 @@
+# remote1.startup - startup file for remote1 machine
+# host on the internet connected to ISP B
+
+# ------------------------------------------ #
+# ------------ network setup --------------- #
+# ------------------------------------------ #
+# MAC address iface[0]
+ifconfig eth0 hw ether b0:b0:b0:b0:b0:b0
+
+# IP address iface[0] and subnet 
+ifconfig eth0 198.51.100.2/24
+
+# route to ispB gateway (the internet)
+route add default gw 198.51.100.1
+# ------------------------------------------ #
+
+# ipv4 only
+sysctl -p
+
+# launches client IPSec VPN on boot
+service ipsec start

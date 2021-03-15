@@ -1,0 +1,8 @@
+# shared.startup - startup file for shared machine
+# machine for resources required by all other machines
+
+# ipv4 only (using 'shared' dir - also where 'hosts' file is)
+sysctl -p
+
+
+

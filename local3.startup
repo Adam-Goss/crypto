@@ -1,0 +1,15 @@
+# local3.startup - startup file for local3 machine
+# host on the internal Warwick u2086937.cyber2020.test domain
+
+# ------------------------------------------ #
+# ------------ network setup --------------- #
+# ------------------------------------------ #
+# MAC address iface[0]
+ifconfig eth0 hw ether a2:a2:a2:a2:a2:a2
+
+# IP address iface[0] and subnet 
+ifconfig eth0 10.11.0.4/16
+
+# route to warwick gateway
+route add default gw 10.11.0.1
+# ------------------------------------------ #

@@ -1,0 +1,19 @@
+# internet machine - simulates real internet to let remote clients connect to warwick
+
+# ------------------------------------------ #
+# ------------ network setup --------------- #
+# ------------------------------------------ #
+# connections from ISP A (warwick)
+ifconfig eth0 213.1.133.97/27
+ifconfig eth0 hw ether ff:ff:ff:34:a3:b1
+
+# connections from ISP B (remote users)
+ifconfig eth1 198.51.100.1/24
+ifconfig eth1 hw ether ff:ff:ff:32:a1:ba
+# ------------------------------------------ #
+
+# to connect machines to real internet
+iptables -t nat -A POSTROUTING -o eth20 -j MASQUERADE
+
+# ipv4 only
+sysctl -p

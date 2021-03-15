@@ -1,0 +1,22 @@
+# hosts - host name resolution for Warwick
+
+# local hosts 
+10.11.0.2 local1
+10.11.0.3 local2
+10.11.0.4 local3
+
+# VPN gateways
+213.1.133.98 vpn1.u2086937.cyber2020.test
+213.1.133.99 vpn2.u2086937.cyber2020.test
+
+# webservers
+213.1.133.100 covid.u2086937.cyber2020.test
+
+# remote hosts
+198.51.100.2 remote1
+198.51.100.3 remote2
+198.51.100.4 remote3
+198.51.100.5 remote4
+198.51.100.6 remote5
+
+
