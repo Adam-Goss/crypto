@@ -3,4 +3,6 @@ A Cyber Security MSc project that configures both an IPSec and Wireguard VPN to 
 
 This model uses the [Netktit](https://github.com/netkit-jh]) virtual network modelling software as PoC. 
 
+See "crypto-pma.pdf" for more information and a thorough walkthrough of resources.
+
 
